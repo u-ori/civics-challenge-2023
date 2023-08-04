@@ -1,1 +1,7 @@
-<h1>test</h1>
+<script>
+    import Map from "./lib/Map.svelte";
+</script>
+
+<Map>
+
+</Map>

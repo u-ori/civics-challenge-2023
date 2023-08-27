@@ -4,7 +4,7 @@
     // import USA from "../assets/usa.svelte"; 
     // import Paper from "../assets/paper.jpg";
     import State from './state.svelte';
-
+    
     import AK from "../assets/states/AK.svelte";
     import AL from "../assets/states/AL.svelte";
     import AR from '../assets/states/AR.svelte';
@@ -60,7 +60,7 @@
     let scale = .75,
         panning = false,
         x = 0,
-        y = -100,
+        y = 0,
         start = { x: 0, y: 0 }
 
     let md = (e) => {
@@ -106,67 +106,69 @@
     on:mouseup={mu}
     on:mousemove={mm}
     on:wheel={w}>
-    <svg viewBox="0 0 675 460" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.5px;" transform="matrix(1.2547,0,0,1.2547,-0.3196,-0.3196)">
-        <State svg={AK} name="Alaska"></State>
-        <State svg={AL} name="Alabama"></State>
-        <State svg={AR} name="Arkansas"></State>
-        <State svg={AZ} name="Arizona"></State>
-        <State svg={CA} name="California"></State>
-        <State svg={CO} name="Colorado"></State>
-        <State svg={CT} name="Connecticut"></State>
-        <State svg={DC} name="District of Columbia"></State>
-        <State svg={DE} name="Delaware"></State>
-        <State svg={FL} name="Florida"></State>
-        <State svg={GA} name="Georgia"></State>
-        <State svg={HI} name="Hawaii"></State>
-        <State svg={IA} name="Iowa"></State>
-        <State svg={ID} name="Idaho"></State>
-        <State svg={IL} name="Illinois"></State>
-        <State svg={IN} name="Indiana"></State>
-        <State svg={KS} name="Kansas"></State>
-        <State svg={KY} name="Kentucky"></State>
-        <State svg={LA} name="Louisiana"></State>
-        <State svg={MA} name="Massachusetts"></State>
-        <State svg={MD} name="Maryland"></State>
-        <State svg={ME} name="Maine"></State>
-        <State svg={MI} name="Michigan"></State>
-        <State svg={MN} name="Minnesota"></State>
-        <State svg={MO} name="Missouri"></State>
-        <State svg={MS} name="Mississippi"></State>
-        <State svg={MT} name="Montana"></State>
-        <State svg={NC} name="North Carolina"></State>
-        <State svg={ND} name="North Dakota"></State>
-        <State svg={NE} name="Nebraska"></State>
-        <State svg={NH} name="New Hampshire"></State>
-        <State svg={NJ} name="New Jersey"></State>
-        <State svg={NM} name="New Mexico"></State>
-        <State svg={NV} name="Nevada"></State>
-        <State svg={NY} name="New York"></State>
-        <State svg={OH} name="Ohio"></State>
-        <State svg={OK} name="Oklahoma"></State>
-        <State svg={OR} name="Oregon"></State>
-        <State svg={PA} name="Pennsylvania"></State>
-        <State svg={RI} name="Rhode Island"></State>
-        <State svg={SC} name="South Carolina"></State>
-        <State svg={SD} name="South Dakota"></State>
-        <State svg={TN} name="Tennessee"></State>
-        <State svg={TX} name="Texas"></State>
-        <State svg={UT} name="Utah"></State>
-        <State svg={VA} name="Virginia"></State>
-        <State svg={VT} name="Vermont"></State>
-        <State svg={WA} name="Washington"></State>
-        <State svg={WI} name="Wisconsin"></State>
-        <State svg={WV} name="West Virginia"></State>
-        <State svg={WY} name="Wyoming"></State>
+    <svg viewBox="0 0 535 380" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.5px;">
+        <State svg={AK} name="Alaska" on:showDetails></State>
+        <State svg={AL} name="Alabama" on:showDetails></State>
+        <State svg={AR} name="Arkansas" on:showDetails></State>
+        <State svg={AZ} name="Arizona" on:showDetails></State>
+        <State svg={CA} name="California" on:showDetails></State>
+        <State svg={CO} name="Colorado" on:showDetails></State>
+        <State svg={CT} name="Connecticut" on:showDetails></State>
+        <State svg={DC} name="District of Columbia" on:showDetails></State>
+        <State svg={DE} name="Delaware" on:showDetails></State>
+        <State svg={FL} name="Florida" on:showDetails></State>
+        <State svg={GA} name="Georgia" on:showDetails></State>
+        <State svg={HI} name="Hawaii" on:showDetails></State>
+        <State svg={IA} name="Iowa" on:showDetails></State>
+        <State svg={ID} name="Idaho" on:showDetails></State>
+        <State svg={IL} name="Illinois" on:showDetails></State>
+        <State svg={IN} name="Indiana" on:showDetails></State>
+        <State svg={KS} name="Kansas" on:showDetails></State>
+        <State svg={KY} name="Kentucky" on:showDetails></State>
+        <State svg={LA} name="Louisiana" on:showDetails></State>
+        <State svg={MA} name="Massachusetts" on:showDetails></State>
+        <State svg={MD} name="Maryland" on:showDetails></State>
+        <State svg={ME} name="Maine" on:showDetails></State>
+        <State svg={MI} name="Michigan" on:showDetails></State>
+        <State svg={MN} name="Minnesota" on:showDetails></State>
+        <State svg={MO} name="Missouri" on:showDetails></State>
+        <State svg={MS} name="Mississippi" on:showDetails></State>
+        <State svg={MT} name="Montana" on:showDetails></State>
+        <State svg={NC} name="North Carolina" on:showDetails></State>
+        <State svg={ND} name="North Dakota" on:showDetails></State>
+        <State svg={NE} name="Nebraska" on:showDetails></State>
+        <State svg={NH} name="New Hampshire" on:showDetails></State>
+        <State svg={NJ} name="New Jersey" on:showDetails></State>
+        <State svg={NM} name="New Mexico" on:showDetails></State>
+        <State svg={NV} name="Nevada" on:showDetails></State>
+        <State svg={NY} name="New York" on:showDetails></State>
+        <State svg={OH} name="Ohio" on:showDetails></State>
+        <State svg={OK} name="Oklahoma" on:showDetails></State>
+        <State svg={OR} name="Oregon" on:showDetails></State>
+        <State svg={PA} name="Pennsylvania" on:showDetails></State>
+        <State svg={RI} name="Rhode Island" on:showDetails></State>
+        <State svg={SC} name="South Carolina" on:showDetails></State>
+        <State svg={SD} name="South Dakota" on:showDetails></State>
+        <State svg={TN} name="Tennessee" on:showDetails></State>
+        <State svg={TX} name="Texas" on:showDetails></State>
+        <State svg={UT} name="Utah" on:showDetails></State>
+        <State svg={VA} name="Virginia" on:showDetails></State>
+        <State svg={VT} name="Vermont" on:showDetails></State>
+        <State svg={WA} name="Washington" on:showDetails></State>
+        <State svg={WI} name="Wisconsin" on:showDetails></State>
+        <State svg={WV} name="West Virginia" on:showDetails></State>
+        <State svg={WY} name="Wyoming" on:showDetails></State>
     </svg>
 </div>
 
 <style>
     div {
+        padding: 30vw;
         width: 100%;
         transform-origin: 0px 0px;
         background-image: url("../assets/paper.jpg");
         background-size: cover;
+        /* box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6); */
     }
 </style>
